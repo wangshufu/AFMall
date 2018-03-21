@@ -5,10 +5,14 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.1-all/wrapper/dists/gradle-4.1-all" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/baselibrary" />
+            <option value="$PROJECT_DIR$/provider" />
+            <option value="$PROJECT_DIR$/usercenter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
