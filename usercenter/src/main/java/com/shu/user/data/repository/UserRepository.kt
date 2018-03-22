@@ -5,11 +5,12 @@ import com.shu.base.data.protocol.BaseResp
 import com.shu.user.data.api.UserApi
 import com.shu.user.data.protocol.RegisterReq
 import rx.Observable
+import javax.inject.Inject
 
 /**
  * Created by wangshufu on 2018/3/21.
  */
-class UserRepository {
+class UserRepository @Inject constructor(){
 
     /**
      * 用户注册

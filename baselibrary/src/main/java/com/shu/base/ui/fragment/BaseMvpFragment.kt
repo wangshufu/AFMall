@@ -1,19 +1,20 @@
-package com.shu.base.ui.activity
+package com.shu.base.ui.fragment
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import com.shu.base.common.BaseApplication
 import com.shu.base.injection.component.ActivityComponent
 import com.shu.base.injection.component.DaggerActivityComponent
 import com.shu.base.injection.module.ActivityModule
 import com.shu.base.presenter.BasePresenter
 import com.shu.base.presenter.view.BaseView
+import com.shu.base.ui.activity.BaseActivity
+import com.trello.rxlifecycle.components.support.RxFragment
 import javax.inject.Inject
 
 /**
- * Created by wangshufu on 2018/3/20.
+ * Created by wangshufu on 2018/3/22.
  */
-abstract open class BaseMvpActivity<T:BasePresenter<*>> : BaseActivity(),BaseView {
+open abstract class BaseMvpFragment<T: BasePresenter<*>> : BaseFragment(), BaseView {
     override fun showLoading() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -30,7 +31,7 @@ abstract open class BaseMvpActivity<T:BasePresenter<*>> : BaseActivity(),BaseVie
     @Inject
     lateinit var mPresenter:T
 
-    lateinit var activityComponent:ActivityComponent
+    lateinit var activityComponent: ActivityComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,8 +44,8 @@ abstract open class BaseMvpActivity<T:BasePresenter<*>> : BaseActivity(),BaseVie
 
     private fun initActivityComponent() {
 
-        activityComponent = DaggerActivityComponent.builder().appComponent((application as BaseApplication).appComponent)
-                .activityModule(ActivityModule(this))
+        activityComponent = DaggerActivityComponent.builder().appComponent((activity.application as BaseApplication).appComponent)
+                .activityModule(ActivityModule(activity))
                 .build()
 
     }

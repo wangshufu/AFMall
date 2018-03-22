@@ -8,4 +8,7 @@ import com.shu.base.presenter.view.BaseView
 open interface RegisterView : BaseView{
 
 
+    fun registerSuc()
+
+    fun registerErr()
 }
