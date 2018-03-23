@@ -17,11 +17,21 @@ class RegisterPresenter @Inject constructor(): BasePresenter<RegisterView>() {
 
 
     fun register(){
+
+        if (checkNetWork()){
+            mView.onError("网络不可用")
+            return
+        }
+
+        mView.showLoading()
+
+
         userService.register("","","")
                 .excute(object : BaseSubscriber<Boolean>(){
                     override fun onNext(t: Boolean) {
                         super.onNext(t)
 
+                        mView.hideLoading()
                         if (t){
                             mView.registerSuc()
                         }else{

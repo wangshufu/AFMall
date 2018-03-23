@@ -9,6 +9,7 @@ import com.shu.base.presenter.BasePresenter
 import com.shu.base.presenter.view.BaseView
 import com.shu.base.ui.activity.BaseActivity
 import com.trello.rxlifecycle.components.support.RxFragment
+import org.jetbrains.anko.support.v4.toast
 import javax.inject.Inject
 
 /**
@@ -23,8 +24,8 @@ open abstract class BaseMvpFragment<T: BasePresenter<*>> : BaseFragment(), BaseV
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun onError() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onError(error: String) {
+        toast(error)
     }
 
 

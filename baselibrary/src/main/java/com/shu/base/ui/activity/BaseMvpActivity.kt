@@ -6,8 +6,12 @@ import com.shu.base.common.BaseApplication
 import com.shu.base.injection.component.ActivityComponent
 import com.shu.base.injection.component.DaggerActivityComponent
 import com.shu.base.injection.module.ActivityModule
+import com.shu.base.injection.module.LifecycleProviderModule
 import com.shu.base.presenter.BasePresenter
 import com.shu.base.presenter.view.BaseView
+import com.shu.base.widgets.ProgressLoading
+import org.jetbrains.anko.progressDialog
+import org.jetbrains.anko.toast
 import javax.inject.Inject
 
 /**
@@ -15,15 +19,15 @@ import javax.inject.Inject
  */
 abstract open class BaseMvpActivity<T:BasePresenter<*>> : BaseActivity(),BaseView {
     override fun showLoading() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        mLoadingDialog.showLoading()
     }
 
     override fun hideLoading() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        mLoadingDialog.hideLoading()
     }
 
-    override fun onError() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onError(error: String) {
+        toast(error)
     }
 
 
@@ -32,11 +36,15 @@ abstract open class BaseMvpActivity<T:BasePresenter<*>> : BaseActivity(),BaseVie
 
     lateinit var activityComponent:ActivityComponent
 
+    private lateinit var mLoadingDialog:ProgressLoading
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         initActivityComponent()
         injectComponent()
+
+        mLoadingDialog = ProgressLoading.create(this)
     }
 
     abstract fun injectComponent()
@@ -45,6 +53,7 @@ abstract open class BaseMvpActivity<T:BasePresenter<*>> : BaseActivity(),BaseVie
 
         activityComponent = DaggerActivityComponent.builder().appComponent((application as BaseApplication).appComponent)
                 .activityModule(ActivityModule(this))
+                .lifecycleProviderModule(LifecycleProviderModule(this))
                 .build()
 
     }

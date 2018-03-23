@@ -11,7 +11,7 @@ class BaseConstant {
         //本地服务器地址
         const val SERVER_ADDRESS = "http://wangshufu.cn/"
         //SP表名
-        const val TABLE_PREFS = "Kotlin_mall"
+        const val TABLE_PREFS = "af_mall"
         //Token Key
         const val KEY_SP_TOKEN = "token"
     }

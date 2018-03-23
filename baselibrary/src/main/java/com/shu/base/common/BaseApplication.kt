@@ -1,6 +1,7 @@
 package com.shu.base.common
 
 import android.app.Application
+import android.content.Context
 import com.shu.base.injection.component.AppComponent
 import com.shu.base.injection.component.DaggerAppComponent
 import com.shu.base.injection.module.AppModule
@@ -11,6 +12,10 @@ import com.shu.base.injection.module.AppModule
 class BaseApplication : Application() {
 
     lateinit var appComponent: AppComponent
+
+    companion object {
+        lateinit var context:Context
+    }
 
     override fun onCreate() {
         super.onCreate()
