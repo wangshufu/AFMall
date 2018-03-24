@@ -63,13 +63,13 @@ dependencies {
     //Glide
     compile "com.github.bumptech.glide:glide:$glide_version"
     //Circle ImageView
-//    compile "de.hdodenhof:circleimageview:${circle_imageView_version}"
+    compile "de.hdodenhof:circleimageview:${circle_imageView_version}"
     //Take Photo
-//    compile "com.jph.takephoto:takephoto_library:${take_photo_version}"
+    compile "com.jph.takephoto:takephoto_library:${take_photo_version}"
     //Alert View
-//    compile "com.bigkoo:alertview:${alert_view_version}"
+    compile "com.bigkoo:alertview:${alert_view_version}"
     //七牛
-//    compile 'com.qiniu:qiniu-android-sdk:7.3.+'
+    compile 'com.qiniu:qiniu-android-sdk:7.3.+'
     //底部导航
 //    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
     //Banner
@@ -87,7 +87,7 @@ dependencies {
     //FlowLayout
 //    compile 'com.zhy:flowlayout-lib:1.0.3'
     //ARouter
-//    compile "com.alibaba:arouter-api:$arouter_api_version"
+    compile "com.alibaba:arouter-api:$arouter_api_version"
     //BadgeView
 //    compile 'q.rorbin:badgeview:1.1.2'
 }

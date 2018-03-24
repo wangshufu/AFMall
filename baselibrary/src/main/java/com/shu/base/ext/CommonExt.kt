@@ -1,6 +1,9 @@
 package com.shu.base.ext
 
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import com.kotlin.base.widgets.DefaultTextWatcher
 import com.shu.base.data.protocol.BaseResp
 import com.shu.base.rx.BaseFunc
 import com.shu.base.rx.BaseFuncBoolean
@@ -26,6 +29,18 @@ fun <T> Observable<T>.excute(subscriber: BaseSubscriber<T>, lifecycleProvider: L
             .subscribe(subscriber)
 }
 
+
+/*
+    扩展Button可用性
+ */
+fun Button.enable(et: EditText, method: () -> Boolean){
+    val btn = this
+    et.addTextChangedListener(object : DefaultTextWatcher(){
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            btn.isEnabled = method()
+        }
+    })
+}
 
 /*
     扩展数据转换

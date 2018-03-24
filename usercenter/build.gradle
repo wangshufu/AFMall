@@ -62,5 +62,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     //Dagger2
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation project(':provider')
     implementation project(':baselibrary')
 }

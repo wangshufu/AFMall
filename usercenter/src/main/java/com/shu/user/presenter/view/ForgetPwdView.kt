@@ -5,11 +5,11 @@ import com.shu.base.presenter.view.BaseView
 /**
  * Created by wangshufu on 2018/3/21.
  */
-open interface RegisterView : BaseView{
+open interface ForgetPwdView : BaseView {
 
 
-    fun registerSuc()
+    fun ForgetPwdSuc()
 
-    fun registerErr()
+    fun ForgetPwdErr()
 
 }

@@ -21,6 +21,8 @@ class BaseApplication : Application() {
         super.onCreate()
 
         initAppInjection()
+
+        context = this
     }
 
     private fun initAppInjection() {

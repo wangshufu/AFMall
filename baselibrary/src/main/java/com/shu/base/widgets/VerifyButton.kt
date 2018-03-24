@@ -5,6 +5,7 @@ import android.os.Handler
 import android.util.AttributeSet
 import android.widget.Button
 import com.shu.base.R
+import java.util.*
 
 /*
     获取验证码按钮
@@ -14,6 +15,7 @@ class VerifyButton(mContext: Context, attrs: AttributeSet) : Button(mContext, at
     private val mHandler: Handler
     private var mCount = 60
     private var mOnVerifyBtnClick: OnVerifyBtnClick? = null
+
 
     init {
         this.text = "获取验证码"
@@ -50,6 +52,7 @@ class VerifyButton(mContext: Context, attrs: AttributeSet) : Button(mContext, at
             mCount--
         }
     }
+
 
     fun removeRunable() {
         mHandler.removeCallbacks(countDown)

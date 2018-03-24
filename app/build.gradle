@@ -36,8 +36,6 @@ dependencies {
     if (isModule.toBoolean()) {
         implementation project(':usercenter')
     }
-
-
 }
 repositories {
     mavenCentral()

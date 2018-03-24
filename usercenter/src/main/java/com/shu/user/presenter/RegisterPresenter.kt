@@ -10,35 +10,31 @@ import javax.inject.Inject
 /**
  * Created by wangshufu on 2018/3/21.
  */
-class RegisterPresenter @Inject constructor(): BasePresenter<RegisterView>() {
+class RegisterPresenter @Inject constructor() : BasePresenter<RegisterView>() {
 
     @Inject
-    lateinit var userService : UserService
+    lateinit var userService: UserService
 
 
-    fun register(){
+    fun register(mobile: String, pwd: String, verifyCode: String) {
 
-        if (checkNetWork()){
-            mView.onError("网络不可用")
+        if (!checkNetWork()) {
             return
         }
 
         mView.showLoading()
 
 
-        userService.register("","","")
-                .excute(object : BaseSubscriber<Boolean>(){
+        userService.register(mobile, pwd, verifyCode)
+                .excute(object : BaseSubscriber<Boolean>(mView) {
                     override fun onNext(t: Boolean) {
                         super.onNext(t)
-
-                        mView.hideLoading()
-                        if (t){
+                        if (t) {
                             mView.registerSuc()
-                        }else{
-                            mView.registerErr()
                         }
+
                     }
-                },lifecycleProvider)
+                }, lifecycleProvider)
     }
 
 }
