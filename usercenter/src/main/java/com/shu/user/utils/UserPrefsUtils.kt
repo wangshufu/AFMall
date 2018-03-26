@@ -1,6 +1,6 @@
 package com.shu.user.utils
 
-import com.kotlin.base.utils.AppPrefsUtils
+import com.shu.base.utils.AppPrefsUtils
 import com.shu.base.common.BaseConstant
 import com.shu.provider.common.ProviderConstant
 import com.shu.user.data.protocol.UserInfo

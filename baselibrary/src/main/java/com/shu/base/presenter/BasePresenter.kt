@@ -1,7 +1,7 @@
 package com.shu.base.presenter
 
 import android.content.Context
-import com.kotlin.base.utils.NetWorkUtils
+import com.shu.base.utils.NetWorkUtils
 import com.shu.base.presenter.view.BaseView
 import com.trello.rxlifecycle.LifecycleProvider
 import javax.inject.Inject

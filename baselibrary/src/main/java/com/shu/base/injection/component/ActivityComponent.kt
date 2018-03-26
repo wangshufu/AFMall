@@ -20,4 +20,5 @@ interface ActivityComponent {
     fun context():Context
 
     fun lifecyleProvider():LifecycleProvider<*>
+
 }

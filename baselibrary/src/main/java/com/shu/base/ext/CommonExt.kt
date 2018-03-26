@@ -3,11 +3,13 @@ package com.shu.base.ext
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import com.kotlin.base.widgets.DefaultTextWatcher
+import android.widget.ImageView
+import com.shu.base.widgets.DefaultTextWatcher
 import com.shu.base.data.protocol.BaseResp
 import com.shu.base.rx.BaseFunc
 import com.shu.base.rx.BaseFuncBoolean
 import com.shu.base.rx.BaseSubscriber
+import com.shu.base.utils.GlideUtils
 import com.trello.rxlifecycle.LifecycleProvider
 import rx.Observable
 import rx.android.schedulers.AndroidSchedulers
@@ -71,4 +73,11 @@ fun View.onClick(listener:View.OnClickListener):View{
 fun View.onClick(method:() -> Unit):View{
     setOnClickListener { method() }
     return this
+}
+
+/*
+    ImageView加载网络图片
+ */
+fun ImageView.loadUrl(url: String) {
+    GlideUtils.loadUrlImage(context, url, this)
 }

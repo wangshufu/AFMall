@@ -1,4 +1,4 @@
-package com.kotlin.user.presenter.view
+package com.shu.user.presenter.view
 
 import com.shu.base.presenter.view.BaseView
 import com.shu.user.data.protocol.UserInfo

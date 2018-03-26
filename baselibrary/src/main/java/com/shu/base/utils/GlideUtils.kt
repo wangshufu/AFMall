@@ -1,12 +1,14 @@
-package com.kotlin.base.utils
+package com.shu.base.utils
 
 import android.content.Context
+import android.util.Log
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.GlideDrawable
 import com.bumptech.glide.request.animation.GlideAnimation
 import com.bumptech.glide.request.target.SimpleTarget
 import com.shu.base.R
+
 
 /*
     Glide工具类

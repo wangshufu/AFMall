@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 26
@@ -36,6 +38,8 @@ dependencies {
     if (isModule.toBoolean()) {
         implementation project(':usercenter')
     }
+    implementation project(':baselibrary')
+    implementation project(':messagecenter')
 }
 repositories {
     mavenCentral()

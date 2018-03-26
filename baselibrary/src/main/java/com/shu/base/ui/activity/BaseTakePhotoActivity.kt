@@ -12,7 +12,7 @@ import com.jph.takephoto.app.TakePhoto
 import com.jph.takephoto.app.TakePhotoImpl
 import com.jph.takephoto.compress.CompressConfig
 import com.jph.takephoto.model.TResult
-import com.kotlin.base.utils.DateUtils
+import com.shu.base.utils.DateUtils
 import com.shu.base.common.BaseApplication
 import com.shu.base.injection.component.ActivityComponent
 import com.shu.base.injection.component.DaggerActivityComponent

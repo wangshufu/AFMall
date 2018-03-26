@@ -1,6 +1,6 @@
 package com.shu.user.presenter
 
-import com.kotlin.user.presenter.view.UserInfoView
+import com.shu.user.presenter.view.UserInfoView
 import com.shu.base.ext.excute
 import com.shu.base.presenter.BasePresenter
 import com.shu.base.rx.BaseSubscriber

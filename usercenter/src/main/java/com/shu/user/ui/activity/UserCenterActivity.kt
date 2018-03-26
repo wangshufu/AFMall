@@ -11,10 +11,10 @@ import com.jph.takephoto.app.TakePhoto
 import com.jph.takephoto.app.TakePhotoImpl
 import com.jph.takephoto.compress.CompressConfig
 import com.jph.takephoto.model.TResult
-import com.kotlin.base.utils.AppPrefsUtils
-import com.kotlin.base.utils.DateUtils
-import com.kotlin.base.utils.GlideUtils
-import com.kotlin.user.presenter.view.UserInfoView
+import com.shu.base.utils.AppPrefsUtils
+import com.shu.base.utils.DateUtils
+import com.shu.base.utils.GlideUtils
+import com.shu.user.presenter.view.UserInfoView
 import com.qiniu.android.http.ResponseInfo
 import com.qiniu.android.storage.UpCompletionHandler
 import com.qiniu.android.storage.UploadManager
@@ -51,6 +51,8 @@ class UserCenterActivity : BaseTakePhotoActivity<UserInfoPresenter>(), UserInfoV
     private var mUserMobile:String? = null
     private var mUserGender:String? = null
     private var mUserSign:String? = null
+
+
 
 
     override fun injectComponent() {

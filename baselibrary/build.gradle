@@ -71,15 +71,15 @@ dependencies {
     //七牛
     compile 'com.qiniu:qiniu-android-sdk:7.3.+'
     //底部导航
-//    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
     //Banner
-//    compile 'com.youth.banner:banner:1.4.10'  //最新版本
+    compile 'com.youth.banner:banner:1.4.10'  //最新版本
     //标签
-//    compile 'com.github.shts:TriangleLabelView:1.1.2'
+    compile 'com.github.shts:TriangleLabelView:1.1.2'
     //画廊
-//    compile 'com.github.crosswall:Android-Coverflow:release-v1.0.4'
+    compile 'com.github.crosswall:Android-Coverflow:release-v1.0.4'
     //MulitStateView
-//    compile "com.github.Kennyc1012:MultiStateView:$multi_state_view_version"
+    compile "com.github.Kennyc1012:MultiStateView:$multi_state_view_version"
     //上下拉刷新
 //    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
     //Kotlin Bus

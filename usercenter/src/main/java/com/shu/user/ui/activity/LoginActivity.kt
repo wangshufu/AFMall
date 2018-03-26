@@ -26,7 +26,6 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView {
     override fun loginSuc(userInfo:UserInfo) {
         toast("登录成功")
         UserPrefsUtils.putUserInfo(userInfo)
-        startActivity<UserCenterActivity>()
         finish()
     }
 

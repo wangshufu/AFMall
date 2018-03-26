@@ -1,4 +1,4 @@
-package com.kotlin.base.utils
+package com.shu.base.utils
 
 import java.text.ParseException
 import java.text.SimpleDateFormat

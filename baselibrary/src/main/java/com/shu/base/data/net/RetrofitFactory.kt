@@ -1,6 +1,6 @@
 package com.shu.base.data.net
 
-import com.kotlin.base.utils.AppPrefsUtils
+import com.shu.base.utils.AppPrefsUtils
 import com.shu.base.common.BaseConstant
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
