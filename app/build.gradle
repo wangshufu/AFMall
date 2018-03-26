@@ -38,8 +38,12 @@ dependencies {
     if (isModule.toBoolean()) {
         implementation project(':usercenter')
     }
+    if (isGoodsModule.toBoolean()) {
+        implementation project(':GoodsCenter')
+    }
     implementation project(':baselibrary')
     implementation project(':messagecenter')
+    implementation project(':GoodsCenter')
 }
 repositories {
     mavenCentral()

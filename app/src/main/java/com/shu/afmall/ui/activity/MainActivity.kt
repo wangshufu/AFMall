@@ -9,6 +9,7 @@ import com.shu.afmall.ui.fragment.MeFragment
 import com.shu.base.common.AppManager
 import com.shu.base.ui.activity.BaseActivity
 import com.shu.base.ui.activity.BaseMvpActivity
+import com.shu.goods.ui.fragment.CategoryFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 import java.util.*
@@ -25,7 +26,7 @@ class MainActivity : BaseActivity() {
     //主界面Fragment
     private val mHomeFragment by lazy { HomeFragment() }
     //商品分类Fragment
-    private val mCategoryFragment by lazy { HomeFragment() }
+    private val mCategoryFragment by lazy { CategoryFragment() }
     //购物车Fragment
     private val mCartFragment by lazy { HomeFragment() }
     //消息Fragment

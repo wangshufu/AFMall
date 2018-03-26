@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.kotlin.base.ui.adapter.BaseRecyclerViewAdapter
+import com.shu.base.ui.adapter.BaseRecyclerViewAdapter
 import com.shu.afmall.R
 import com.shu.base.utils.GlideUtils
 import kotlinx.android.synthetic.main.layout_home_discount_item.view.*

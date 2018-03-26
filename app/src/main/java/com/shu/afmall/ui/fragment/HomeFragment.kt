@@ -9,12 +9,15 @@ import com.shu.afmall.R
 import com.shu.afmall.common.*
 import com.shu.afmall.ui.adapter.HomeDiscountAdapter
 import com.shu.afmall.ui.adapter.TopicAdapter
+import com.shu.base.ext.onClick
 import com.shu.base.ui.fragment.BaseFragment
 import com.shu.base.widgets.BannerImageLoader
+import com.shu.goods.ui.activity.SearchGoodsActivity
 import com.youth.banner.BannerConfig
 import com.youth.banner.Transformer
 import kotlinx.android.synthetic.main.fragment_home.*
 import me.crosswall.lib.coverflow.CoverFlow
+import org.jetbrains.anko.support.v4.startActivity
 
 /**
  * Created by wangshufu on 2018/3/25.
@@ -30,12 +33,17 @@ class HomeFragment : BaseFragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //必须要在这个方法里调用,不然用anko库是拿不到banner的
+        initView()
         initBanner()
-
-
         initNews()
         initDiscount()
         initTopic()
+    }
+
+    private fun initView() {
+        mSearchEt.onClick {
+            startActivity<SearchGoodsActivity>()
+        }
     }
 
     /**
@@ -57,7 +65,8 @@ class HomeFragment : BaseFragment() {
      */
     private fun initNews(){
         //公告
-        mNewsFlipperView.setData(arrayOf("夏日炎炎，第一波福利还有30秒到达战场", "新用户立领1000元优惠券"))
+        mNewsFlipperView.setData(arrayOf("夏日炎炎，第一波福利还有30秒到达战场",
+                "新用户立领1000元优惠券","全球时尚悦实惠，领鲜共享悦品位","质优，平价，超新鲜，网购阿福商城","到阿福商城购物，享最新便利"))
     }
 
     /**
