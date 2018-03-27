@@ -34,15 +34,15 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation project(':provider')
+    implementation project(':Provider')
     if (isModule.toBoolean()) {
-        implementation project(':usercenter')
+        implementation project(':UserCenter')
     }
     if (isGoodsModule.toBoolean()) {
         implementation project(':GoodsCenter')
     }
-    implementation project(':baselibrary')
-    implementation project(':messagecenter')
+    implementation project(':BaseLibrary')
+    implementation project(':MessageCenter')
     implementation project(':GoodsCenter')
 }
 repositories {

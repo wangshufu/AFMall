@@ -31,8 +31,10 @@ class GoodsDetailTabtwoFragment : BaseFragment() {
     private fun initObserver() {
         Bus.observe<GoodsDetailImageEvent>()
                 .subscribe { t : GoodsDetailImageEvent -> run {
-                    mGoodsDetailOneIv.loadUrl(t.imgOne)
-                    mGoodsDetailTwoIv.loadUrl(t.imgTwo)
+                    t?.let {
+                        mGoodsDetailOneIv.loadUrl(t.imgOne)
+                        mGoodsDetailTwoIv.loadUrl(t.imgTwo)
+                    }
                 }  }
                 .registerInBus(this) //registers your subscription to unsubscribe it properly later
     }
