@@ -6,6 +6,7 @@ import com.shu.goods.injection.module.CategoryModule
 import com.shu.goods.injection.module.GoodsListModule
 import com.shu.goods.ui.activity.GoodsListActivity
 import com.shu.goods.ui.fragment.CategoryFragment
+import com.shu.goods.ui.fragment.GoodsDetailTabOneFragment
 import dagger.Component
 
 /**
@@ -15,4 +16,5 @@ import dagger.Component
 @Component(dependencies = arrayOf(ActivityComponent::class),modules = arrayOf(GoodsListModule::class))
 interface GoodsListComponent {
     fun inject(activity: GoodsListActivity)
+    fun inject(fragment: GoodsDetailTabOneFragment)
 }

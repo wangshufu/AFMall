@@ -18,6 +18,8 @@ class GoodsConstant {
         const  val SEARCH_GOODS_TYPE_KEYWORD = 1
         //商品关键字
         const val KEY_GOODS_KEYWORD = "goods_keyword"
+        //商品ID
+        const  val KEY_GOODS_ID = "goods_id"
 
     }
 }

@@ -1,5 +1,6 @@
 package com.shu.goods.data.net
 
+import com.kotlin.goods.data.protocol.GetGoodsDetailReq
 import com.kotlin.goods.data.protocol.GetGoodsListByKeywordReq
 import com.shu.base.data.protocol.BaseResp
 import com.shu.goods.data.protocol.GetGoodsListReq
@@ -21,8 +22,15 @@ interface GoodsListApi {
 
     /*
     获取商品列表
- */
+    */
     @POST("goods/getGoodsListByKeyword")
     fun getGoodsListByKeyword(@Body req: GetGoodsListByKeywordReq): Observable<BaseResp<MutableList<Goods>?>>
+
+    /*
+        获取商品详情
+     */
+    @POST("goods/getGoodsDetail")
+    fun getGoodsDetail(@Body req: GetGoodsDetailReq): Observable<BaseResp<Goods>>
+
 
 }

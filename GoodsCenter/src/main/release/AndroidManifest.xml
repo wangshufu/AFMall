@@ -8,6 +8,7 @@
         android:supportsRtl="true">
         <activity android:name=".ui.activity.GoodsListActivity"/>
         <activity android:name=".ui.activity.SearchGoodsActivity"/>
+        <activity android:name=".ui.activity.GoodsDetailActivity"/>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import com.kennyc.view.MultiStateView.*
 import com.shu.base.common.BaseApplication.Companion.context
 import com.shu.base.ext.startLoading
 import com.shu.base.ui.activity.BaseMvpActivity
+import com.shu.base.ui.adapter.BaseRecyclerViewAdapter
 import com.shu.goods.R
 import com.shu.goods.common.GoodsConstant
 import com.shu.goods.data.protocol.Goods
@@ -23,6 +24,7 @@ import com.shu.goods.presenter.GoodsListPresenter
 import com.shu.goods.presenter.view.GoodsListView
 import com.shu.goods.ui.adapter.GoodsListAdapter
 import kotlinx.android.synthetic.main.activity_goods.*
+import org.jetbrains.anko.intentFor
 
 /**
  * Created by wangshufu on 2018/3/26.
@@ -58,6 +60,12 @@ class GoodsListActivity : BaseMvpActivity<GoodsListPresenter>(), GoodsListView, 
         mAdapter = GoodsListAdapter(context)
         mGoodsRv.layoutManager = mLayoutManager
         mGoodsRv.adapter = mAdapter
+        mAdapter.setOnItemClickListener(object : BaseRecyclerViewAdapter.OnItemClickListener<Goods> {
+            override fun onItemClick(item: Goods, position: Int) {
+                startActivity(intentFor<GoodsDetailActivity>().putExtra(GoodsConstant.KEY_GOODS_ID, item.id))
+            }
+
+        })
     }
 
 
@@ -73,7 +81,7 @@ class GoodsListActivity : BaseMvpActivity<GoodsListPresenter>(), GoodsListView, 
                 mAdapter.addData(list)
             }
             mMultiStateView.viewState = VIEW_STATE_CONTENT
-        } else if (mAdapter.dataList == null || mAdapter.dataList.size == 0){//这里还要这样判断是怕加载更多时,如果返回null的话,多视图就会变成空视图了
+        } else if (mAdapter.dataList == null || mAdapter.dataList.size == 0) {//这里还要这样判断是怕加载更多时,如果返回null的话,多视图就会变成空视图了
             mMultiStateView.viewState = VIEW_STATE_EMPTY
         }
     }

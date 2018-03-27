@@ -1,5 +1,6 @@
 package com.shu.goods.data.repository
 
+import com.kotlin.goods.data.protocol.GetGoodsDetailReq
 import com.kotlin.goods.data.protocol.GetGoodsListByKeywordReq
 import com.shu.goods.data.protocol.Category
 import com.shu.goods.data.protocol.GetCategoryReq
@@ -29,5 +30,12 @@ class GoodsListRepository @Inject constructor() {
      */
     fun getGoodsListByKeyword(keyword: String, pageNo: Int): Observable<BaseResp<MutableList<Goods>?>> {
         return RetrofitFactory.instance.create(GoodsListApi::class.java).getGoodsListByKeyword(GetGoodsListByKeywordReq(keyword, pageNo))
+    }
+
+    /*
+        商品详情
+     */
+    fun getGoodsDetail(goodsId: Int): Observable<BaseResp<Goods>> {
+        return RetrofitFactory.instance.create(GoodsListApi::class.java).getGoodsDetail(GetGoodsDetailReq(goodsId))
     }
 }
