@@ -24,6 +24,7 @@ class RegisterActivity : BaseMvpActivity<RegisterPresenter>(),RegisterView {
 
     override fun registerSuc() {
         toast("注册成功")
+        finish()
     }
 
     override fun registerErr() {

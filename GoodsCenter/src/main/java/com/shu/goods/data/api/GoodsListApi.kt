@@ -1,4 +1,4 @@
-package com.shu.goods.data.net
+package com.shu.goods.data.api
 
 import com.kotlin.goods.data.protocol.GetGoodsDetailReq
 import com.kotlin.goods.data.protocol.GetGoodsListByKeywordReq

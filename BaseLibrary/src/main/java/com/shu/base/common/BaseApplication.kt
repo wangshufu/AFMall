@@ -2,6 +2,7 @@ package com.shu.base.common
 
 import android.app.Application
 import android.content.Context
+import com.alibaba.android.arouter.launcher.ARouter
 import com.shu.base.injection.component.AppComponent
 import com.shu.base.injection.component.DaggerAppComponent
 import com.shu.base.injection.module.AppModule
@@ -23,6 +24,11 @@ class BaseApplication : Application() {
         initAppInjection()
 
         context = this
+
+        //初始化ARouter
+        ARouter.openLog();     // 打印日志
+        ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
+        ARouter.init(this);
     }
 
     private fun initAppInjection() {

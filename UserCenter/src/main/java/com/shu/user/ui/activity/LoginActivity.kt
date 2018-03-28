@@ -1,9 +1,11 @@
 package com.shu.user.ui.activity
 
 import android.os.Bundle
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.shu.base.ext.enable
 import com.shu.base.ext.onClick
 import com.shu.base.ui.activity.BaseMvpActivity
+import com.shu.provider.router.RouterPath
 import com.shu.user.R
 import com.shu.user.data.protocol.UserInfo
 import com.shu.user.injection.component.DaggerUserComponent
@@ -20,10 +22,11 @@ import org.jetbrains.anko.toast
 /**
  * 用户注册界面
  */
+@Route(path = RouterPath.UserCenter.PATH_LOGIN)
 class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView {
 
 
-    override fun loginSuc(userInfo:UserInfo) {
+    override fun loginSuc(userInfo: UserInfo) {
         toast("登录成功")
         UserPrefsUtils.putUserInfo(userInfo)
         finish()
@@ -40,7 +43,6 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView {
     }
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -48,11 +50,11 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView {
     }
 
     private fun initView() {
-        mLoginBtn.enable(mMobileEt,{isBtnEnable()})
-        mLoginBtn.enable(mPwdEt,{isBtnEnable()})
+        mLoginBtn.enable(mMobileEt, { isBtnEnable() })
+        mLoginBtn.enable(mPwdEt, { isBtnEnable() })
 
         mLoginBtn.onClick {
-            mPresenter.login(mMobileEt.text.toString(),mPwdEt.text.toString(),"")
+            mPresenter.login(mMobileEt.text.toString(), mPwdEt.text.toString(), "")
         }
 
 
@@ -65,7 +67,7 @@ class LoginActivity : BaseMvpActivity<LoginPresenter>(), LoginView {
         }
     }
 
-    private fun isBtnEnable():Boolean{
+    private fun isBtnEnable(): Boolean {
         return mMobileEt.text.isNullOrEmpty().not() &&
                 mPwdEt.text.isNullOrEmpty().not()
     }

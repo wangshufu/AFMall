@@ -36,6 +36,11 @@ class GoodsDetailTabtwoFragment : BaseFragment() {
                         mGoodsDetailTwoIv.loadUrl(t.imgTwo)
                     }
                 }  }
-                .registerInBus(this) //registers your subscription to unsubscribe it properly later
+                .registerInBus(this)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Bus.unregister(this)
     }
 }

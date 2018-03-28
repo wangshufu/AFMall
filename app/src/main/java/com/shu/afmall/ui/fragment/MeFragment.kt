@@ -11,7 +11,12 @@ import com.shu.base.ext.loadUrl
 import com.shu.base.ext.onClick
 import com.shu.base.ui.fragment.BaseFragment
 import com.shu.base.utils.AppPrefsUtils
+import com.shu.order.common.OrderConstant
+import com.shu.order.common.OrderStatus
+import com.shu.order.ui.activity.OrderActivity
+import com.shu.order.ui.activity.ShipAddressActivity
 import com.shu.provider.common.ProviderConstant
+import com.shu.provider.common.afterLogin
 import com.shu.provider.common.isUserLogin
 import com.shu.user.ui.activity.LoginActivity
 import com.shu.user.ui.activity.UserCenterActivity
@@ -67,6 +72,11 @@ class MeFragment : BaseFragment(), View.OnClickListener {
         mUserIconIv.onClick(this)
         mUserNameTv.onClick(this)
         mSettingTv.onClick(this)
+        mAddressTv.onClick(this)
+        mWaitPayOrderTv.onClick(this)
+        mWaitConfirmOrderTv.onClick(this)
+        mCompleteOrderTv.onClick(this)
+        mAllOrderTv.onClick(this)
     }
 
     override fun onClick(v: View?) {
@@ -79,8 +89,25 @@ class MeFragment : BaseFragment(), View.OnClickListener {
                     startActivity<LoginActivity>()
                 }
             }
+            R.id.mWaitPayOrderTv -> {
+                startActivity<OrderActivity>(OrderConstant.KEY_ORDER_STATUS to OrderStatus.ORDER_WAIT_PAY)
+            }
+            R.id.mWaitConfirmOrderTv -> {
+                startActivity<OrderActivity>(OrderConstant.KEY_ORDER_STATUS to OrderStatus.ORDER_WAIT_CONFIRM)
+            }
+            R.id.mCompleteOrderTv -> {
+                startActivity<OrderActivity>(OrderConstant.KEY_ORDER_STATUS to OrderStatus.ORDER_COMPLETED)
+            }
+            R.id.mAllOrderTv -> {
+                afterLogin {
+                    startActivity<OrderActivity>()
+                }
+            }
             R.id.mSettingTv -> {
                 startActivity<SettingActivity>()
+            }
+            R.id.mAddressTv -> {
+                startActivity<ShipAddressActivity>()
             }
         }
     }

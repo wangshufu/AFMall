@@ -4,7 +4,7 @@ import com.shu.goods.data.protocol.Category
 import com.shu.goods.data.protocol.GetCategoryReq
 import com.shu.base.data.net.RetrofitFactory
 import com.shu.base.data.protocol.BaseResp
-import com.shu.goods.data.net.CategoryApi
+import com.shu.goods.data.api.CategoryApi
 import rx.Observable
 import javax.inject.Inject
 

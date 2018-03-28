@@ -1,4 +1,4 @@
-package com.shu.goods.data.net
+package com.shu.goods.data.api
 
 import com.shu.goods.data.protocol.Category
 import com.shu.goods.data.protocol.GetCategoryReq

@@ -11,5 +11,7 @@ open interface GoodsDetailView : BaseView {
 
     fun getGoodsDetailResult(goods:Goods)
 
+    //加入购物车
+    fun onAddCartResult(result: Int)
 
 }

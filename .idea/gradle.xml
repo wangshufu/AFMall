@@ -9,9 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AliPay" />
             <option value="$PROJECT_DIR$/BaseLibrary" />
             <option value="$PROJECT_DIR$/GoodsCenter" />
             <option value="$PROJECT_DIR$/MessageCenter" />
+            <option value="$PROJECT_DIR$/OrderCenter" />
             <option value="$PROJECT_DIR$/Provider" />
             <option value="$PROJECT_DIR$/UserCenter" />
             <option value="$PROJECT_DIR$/app" />

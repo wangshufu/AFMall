@@ -2,12 +2,9 @@ package com.shu.goods.data.repository
 
 import com.kotlin.goods.data.protocol.GetGoodsDetailReq
 import com.kotlin.goods.data.protocol.GetGoodsListByKeywordReq
-import com.shu.goods.data.protocol.Category
-import com.shu.goods.data.protocol.GetCategoryReq
 import com.shu.base.data.net.RetrofitFactory
 import com.shu.base.data.protocol.BaseResp
-import com.shu.goods.data.net.CategoryApi
-import com.shu.goods.data.net.GoodsListApi
+import com.shu.goods.data.api.GoodsListApi
 import com.shu.goods.data.protocol.GetGoodsListReq
 import com.shu.goods.data.protocol.Goods
 import rx.Observable
