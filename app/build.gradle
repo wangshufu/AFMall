@@ -12,6 +12,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId
+        ]
     }
     buildTypes {
         release {
@@ -42,6 +47,7 @@ dependencies {
     implementation project(':MessageCenter')
     implementation project(':GoodsCenter')
     implementation project(':OrderCenter')
+    implementation project(':AliPay')
 }
 repositories {
     mavenCentral()

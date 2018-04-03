@@ -1,2 +1,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shu.messagecenter" />
+xmlns:tools="http://schemas.android.com/tools"
+package="com.shu.messagecenter">
+
+<application android:allowBackup="true"
+    android:label="@string/app_name"
+    android:supportsRtl="true">
+
+    <!--<receiver-->
+        <!--android:name=".receiver.MessageReceiver"-->
+        <!--android:enabled="true">-->
+        <!--<intent-filter>-->
+            <!--<action android:name="cn.jpush.android.intent.REGISTRATION" />-->
+            <!--<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />-->
+            <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />-->
+            <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />-->
+            <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />-->
+            <!--<action android:name="cn.jpush.android.intent.CONNECTION" />-->
+            <!--<category android:name="com.kotlin.mall" />-->
+        <!--</intent-filter>-->
+    <!--</receiver>-->
+
+    <meta-data android:name="JPUSH_APPKEY" android:value="${JPUSH_APPKEY}"
+        tools:replace="android:value"
+        />
+    <meta-data android:name="JPUSH_CHANNEL" android:value="${JPUSH_CHANNEL}"
+        tools:replace="android:value"
+        />
+</application>
+
+</manifest>

@@ -10,7 +10,7 @@ import com.shu.base.injection.module.AppModule
 /**
  * Created by wangshufu on 2018/3/22.
  */
-class BaseApplication : Application() {
+open class BaseApplication : Application() {
 
     lateinit var appComponent: AppComponent
 
