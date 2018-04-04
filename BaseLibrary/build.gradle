@@ -4,15 +4,15 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion compile_sdk_version
 
 
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        versionCode versionCode
+        versionName versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -30,7 +30,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation "com.android.support:appcompat-v7:${android_support_version}"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
@@ -71,27 +71,27 @@ dependencies {
     //Alert View
     implementation "com.bigkoo:alertview:${alert_view_version}"
     //七牛
-    implementation 'com.qiniu:qiniu-android-sdk:7.3.+'
+    implementation "com.qiniu:qiniu-android-sdk:${qiniu_version}"
     //底部导航
-    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+    implementation "com.ashokvarma.android:bottom-navigation-bar:${bottom_navigation_bar_version}"
     //Banner
-    implementation 'com.youth.banner:banner:1.4.10'  //最新版本
+    implementation "com.youth.banner:banner:${banner_version}"
     //标签
-    implementation 'com.github.shts:TriangleLabelView:1.1.2'
+    implementation "com.github.shts:TriangleLabelView:${triangle_label_view_version}"
     //画廊
-    implementation 'com.github.crosswall:Android-Coverflow:release-v1.0.4'
+    implementation "com.github.crosswall:Android-Coverflow:${coverflow_version}"
     //MulitStateView
     implementation "com.github.Kennyc1012:MultiStateView:$multi_state_view_version"
     //上下拉刷新
-    implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+    implementation "cn.bingoogolapple:bga-refreshlayout:${refreshlayout_version}"
     //Kotlin Bus
-    implementation 'com.eightbitlab:rxbus:1.0.2'
+    implementation "com.eightbitlab:rxbus:${kotlin_rxbus_version}"
     //FlowLayout
-    implementation 'com.zhy:flowlayout-lib:1.0.3'
+    implementation "com.zhy:flowlayout-lib:${flowlayout_version}"
     //ARouter
     implementation "com.alibaba:arouter-api:$arouter_api_version"
     //BadgeView
-    implementation 'q.rorbin:badgeview:1.1.2'
+    implementation "q.rorbin:badgeview:${badgeview_version}"
 }
 repositories {
     mavenCentral()

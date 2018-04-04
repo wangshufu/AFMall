@@ -1,35 +1,80 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+
+    //Android
+    ext.compile_sdk_version = 26
+    ext.min_sdk_version = 15
+    ext.target_sdk_version = 26
+
+    //版本
+    ext.versionCode = 1
+    ext.versionName = '1.0.0'
+    //Kotlin
     ext.kotlin_version = '1.1.51'
-//    ext.compile_sdk_version = 25
-//    ext.build_tools_version = "25.0.2"
-//    ext.min_sdk_version = 15
-//    ext.target_sdk_version = 25
     ext.android_support_version = "26.1.0"
     ext.anko_version = '0.10.1'
 
+    //RXjava
     ext.rx_kotlin_version = '1.0.0'
-    ext.rx_android_version ='1.2.1'
+    ext.rx_android_version = '1.2.1'
 
+    //Retrofit
     ext.ok_http_version = '3.4.1'
     ext.retrofit_version = '2.1.0'
 
+    //Dagger2
     ext.dagger_version = '2.11'
 
+    //RX_life
     ext.rx_lifecycle_version = '1.0'
 
+    //Glide
     ext.glide_version = "3.7.0"
 
+    //圆形图
     ext.circle_imageView_version = "2.1.0"
 
+    //图片选择器
     ext.take_photo_version = "4.0.3"
 
+    //对话框
     ext.alert_view_version = "1.0.3"
 
+    //多模块视图
     ext.multi_state_view_version = '1.3.2'
+
+    //ARouter
     ext.arouter_api_version = '1.3.1'
     ext.arouter_compiler_version = '1.1.4'
+
+    //BottomNavigationBar
+    ext.bottom_navigation_bar_version = '2.0.2'
+
+    //七牛云
+    ext.qiniu_version = '7.3.+'
+
+    //Banner
+    ext.banner_version = '1.4.10'
+
+    //标签
+    ext.triangle_label_view_version = '1.1.2'
+
+    //Kotlin Rxbus
+    ext.kotlin_rxbus_version = '1.0.2'
+
+    //flowlayout
+    ext.flowlayout_version = '1.0.3'
+
+    //BadgeView
+    ext.badgeview_version = '1.1.2'
+
+    //refreshlayout  上下拉刷新
+    ext.refreshlayout_version = '1.1.7@aar'
+
+    //画廊
+    ext.coverflow_version = 'release-v1.0.4'
+
 
     repositories {
         google()
