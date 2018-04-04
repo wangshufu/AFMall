@@ -1,0 +1,28 @@
+ext {
+
+    android = [
+
+            compileSdkVersion : 26,
+            applicationId : "com.shu.afmall",
+            minSdkVersion : 15,
+            targetSdkVersion :26,
+            versionCode :1,
+            versionName :"1.0"
+
+    ]
+
+
+    def dependVersion = [
+
+            kotlin : "1.1.51",
+            support : "26.1.0",
+            anko : "0.10.1",
+            retrofit : "2.1.0",
+            okhttp : "3.4.1",
+            dagger2 : "2.11",
+
+
+    ]
+
+
+}

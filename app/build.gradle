@@ -38,7 +38,52 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //Android Support
+    implementation "com.android.support:recyclerview-v7:${android_support_version}"
+    implementation "com.android.support:design:${android_support_version}"
+
+    // Anko Commons
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    // Support-v4 (only Anko Commons)
+    implementation "org.jetbrains.anko:anko-support-v4-commons:$anko_version"
+    // RxKotlin and RxAndroid
+    implementation "io.reactivex:rxkotlin:${rx_kotlin_version}"
+    implementation "io.reactivex:rxandroid:${rx_android_version}"
+    //Dagger2
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    //RxLifecycle
+    implementation "com.trello:rxlifecycle-kotlin:$rx_lifecycle_version"
+    implementation "com.trello:rxlifecycle-components:$rx_lifecycle_version"
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    //Circle ImageView
+    implementation "de.hdodenhof:circleimageview:${circle_imageView_version}"
+    //Take Photo
+    implementation "com.jph.takephoto:takephoto_library:${take_photo_version}"
+    //底部导航
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+    //Banner
+    implementation 'com.youth.banner:banner:1.4.10'  //最新版本
+    //标签
+    implementation 'com.github.shts:TriangleLabelView:1.1.2'
+    //画廊
+    implementation 'com.github.crosswall:Android-Coverflow:release-v1.0.4'
+    //MulitStateView
+    implementation "com.github.Kennyc1012:MultiStateView:$multi_state_view_version"
+    //上下拉刷新
+    implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+    //Kotlin Bus
+    implementation 'com.eightbitlab:rxbus:1.0.2'
+    //FlowLayout
+    implementation 'com.zhy:flowlayout-lib:1.0.3'
+    //ARouter
+    implementation "com.alibaba:arouter-api:$arouter_api_version"
+
+
     implementation project(':Provider')
     if (isModule.toBoolean()) {
         implementation project(':UserCenter')
@@ -48,6 +93,9 @@ dependencies {
     implementation project(':GoodsCenter')
     implementation project(':OrderCenter')
     implementation project(':AliPay')
+
+    implementation 'cn.jiguang.sdk:jpush:3.0.9'  // 此处以JPush 3.0.9 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.1.7'  // 此处以JCore 1.1.7 版本为例。
 }
 repositories {
     mavenCentral()
