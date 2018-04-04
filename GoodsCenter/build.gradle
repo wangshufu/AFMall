@@ -89,18 +89,20 @@ dependencies {
     //ARouter
     kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
     implementation "com.alibaba:arouter-api:$arouter_api_version"
-    //Kotlin Bus
-    implementation 'com.eightbitlab:rxbus:1.0.2'
-    //BadgeView
-    implementation 'q.rorbin:badgeview:1.1.2'
-    //上下拉刷新
-    implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
     //MulitStateView
     implementation "com.github.Kennyc1012:MultiStateView:$multi_state_view_version"
-    //Banner
-    implementation 'com.youth.banner:banner:1.4.10'
+    //上下拉刷新
+    implementation "cn.bingoogolapple:bga-refreshlayout:${refreshlayout_version}"
+    //Kotlin Bus
+    implementation "com.eightbitlab:rxbus:${kotlin_rxbus_version}"
     //FlowLayout
-    implementation 'com.zhy:flowlayout-lib:1.0.3'
+    implementation "com.zhy:flowlayout-lib:${flowlayout_version}"
+    //Banner
+    implementation "com.youth.banner:banner:${banner_version}"
+    //BadgeView
+    implementation "q.rorbin:badgeview:${badgeview_version}"
+    //上下拉刷新
+    implementation "cn.bingoogolapple:bga-refreshlayout:${refreshlayout_version}"
 
     implementation 'ren.qinc.numberbutton:numberbutton:0.0.1'
 }
