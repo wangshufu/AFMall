@@ -4,12 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AFMall.iml" filepath="$PROJECT_DIR$/AFMall.iml" />
       <module fileurl="file://$PROJECT_DIR$/AliPay/AliPay.iml" filepath="$PROJECT_DIR$/AliPay/AliPay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BaseLibrary/baselibrary.iml" filepath="$PROJECT_DIR$/BaseLibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" filepath="$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/GoodsCenter/GoodsCenter.iml" filepath="$PROJECT_DIR$/GoodsCenter/GoodsCenter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MessageCenter/messagecenter.iml" filepath="$PROJECT_DIR$/MessageCenter/messagecenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MessageCenter/MessageCenter.iml" filepath="$PROJECT_DIR$/MessageCenter/MessageCenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/OrderCenter/OrderCenter.iml" filepath="$PROJECT_DIR$/OrderCenter/OrderCenter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Provider/provider.iml" filepath="$PROJECT_DIR$/Provider/provider.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UserCenter/usercenter.iml" filepath="$PROJECT_DIR$/UserCenter/usercenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Provider/Provider.iml" filepath="$PROJECT_DIR$/Provider/Provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserCenter/UserCenter.iml" filepath="$PROJECT_DIR$/UserCenter/UserCenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
