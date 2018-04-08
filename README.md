@@ -12,14 +12,8 @@ A pure shopping App based on Kotlin + ARouter + MVP + RxJava2 + Retrofit + Dagge
 
 <img src="screenshots/login.png" width = "40%"/> <img src="screenshots/home.png" width = "40%"/>
 
-<img src="screenshots/category.png" width = "40%"/>
+<img src="screenshots/category.png" width = "40%"/> <img src="screenshots/cart.png" width = "40%"/>
 
-<img src="screenshots/cart.png" width = "40%"/>
+<img src="screenshots/order.png" width = "40%"/> <img src="screenshots/setting.png" width = "40%"/>
 
-<img src="screenshots/order.png" width = "40%"/>
-
-<img src="screenshots/setting.png" width = "40%"/>
-
-<img src="screenshots/pay.png" width = "40%"/>
-
-<img src="screenshots/message.png" width = "40%"/>
+<img src="screenshots/pay.png" width = "40%"/> <img src="screenshots/message.png" width = "40%"/>
