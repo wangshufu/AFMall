@@ -31,6 +31,7 @@ A pure shopping App based on Kotlin + ARouter + MVP + RxJava2 + Retrofit + Dagge
 + 使用RxLifecycle对Rxjava订阅的生命周期进行管理,防止OOM
 + 使用Rxbus进行组件间的通信
 + 使用Glide做图片处理和加载
++ 使用Retrofit网络请求框架
 + 使用okhttp3对日志、请求内容类型(json)、头部信息进行配置
 + 使用七牛云实现图片储存
 + 使用BGA-refreshlayout实现上拉刷新、下拉加载
